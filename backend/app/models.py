@@ -17,7 +17,7 @@ class JobApplication(Base):
     job_url: Mapped[str | None] = mapped_column(String(1000), nullable=True)
     status: Mapped[str] = mapped_column(String(30), nullable=False, default="Saved", index=True)
     applied_date: Mapped[date | None] = mapped_column(Date, nullable=True)
-    follow_up_date: Mapped[datetime.date | None] = mapped_column(Date, nullable=True)
+    follow_up_date: Mapped[date | None] = mapped_column(Date, nullable=True)
     salary_range: Mapped[str | None] = mapped_column(String(120), nullable=True)
     notes: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, default=datetime.utcnow)
